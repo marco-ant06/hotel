@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .formul {
+            background-color: aliceblue;
+            border-width: 5px;
+            border-color: aquamarine;
+            border-style: solid;
+            padding: 20px;
+            
+        }
+
+        .cabecalho {
+            background-color: aliceblue;
+            border-width: 5px;
+            border-color: aquamarine;
+            border-style: solid;
+        }
+        .form-button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue;">Reservas</h1>
+    <h2 class="cabecalho">Cadastro de Cliente</h2>
+    <div class="formul">
+        <form action="cadastro_salvar.php" method="post">
+            <label for="">Nome:</label><input type="text"><br>
+            <label for="">E-mail:</label><input type="email"><br>
+            <label for="">Telefone:</label><input type="text"><br>
+            <label for="">Senha:</label><input type="password"><br>
+            <button class="form-button">enviar</button>
+        </form>
+    <a href="login.html">Login</a>
+    </div>
+</body>
+</html>
