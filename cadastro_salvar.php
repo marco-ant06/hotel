@@ -8,7 +8,7 @@ $senha = $_POST['senha'];
 $sql = "INSERT INTO clientes (nome, email, telefone, senha) values ('$nome', '$email', '$telefone', '$senha');";
 
 if(mysqli_query($conexao,$sql)){
-
+    echo "Cadastro completo! <a href='reservas.html'>reservas</a>";
 }else{
 
 }
