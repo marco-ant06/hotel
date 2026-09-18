@@ -4,3 +4,24 @@ body {
     font-family: Geneva, Tahoma, sans-serif;
     text-align: center;
 }
+.formul {
+    background-color: aliceblue;
+    border-width: 5px;
+    border-color: aquamarine;
+    border-style: solid;
+    padding: 20px;    
+}
+.cabecalho {
+    background-color: aliceblue;
+    border-width: 5px;
+    border-color: aquamarine;
+    border-style: solid;
+}
+.form-button{
+    cursor: pointer;
+    background-color: #0056b3;
+}
+.bindex{
+    border-color: aqua;
+    border-radius: 5px;
+}
