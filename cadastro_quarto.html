@@ -10,10 +10,15 @@
     <h1 style="color: blue;">Hotel System</h1>
     <h2 class="cabecalho">Cadastro de Cliente</h2>
     <div class="formul">
-        <form action="cadastro_salvar.php" method="post">
+        <form action="salvar_quarto.php" method="post">
+            <label for="">id do hotel:</label><input type="number" id="id_hotel" name="id_hotel"><br>
             <label for="">numero:</label><input type="text" id="numero" name="numero"><br>
-            <label for="">tipo:</label><input type="text" id="tipo" name="tipo"><br>
-            <label for="">Preço diaria</label><input type="number" step="0.01">
+            <label for="">tipo:</label><select id="tipo" name="tipo">
+                <option value="padrão">Solteiro</option>
+                <option value="familia">Familia</option>
+                <option value="duplo">Duplo</option>
+            </select><br>
+            <label for="">Preço diaria</label><input type="number" step="0.01" id="preco" name="preco">
             <button class="form-button">enviar</button>
         </form>
     <a href="login.html">Login</a>
