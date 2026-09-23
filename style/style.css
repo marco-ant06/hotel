@@ -25,3 +25,7 @@ body {
     border-color: aqua;
     border-radius: 5px;
 }
+.table{
+    text-align: center;
+    background-color: aliceblue;
+}
