@@ -37,8 +37,8 @@ $resultado = mysqli_query($conexao, $sql);
                     echo "<td>", $hoteis['nome'], "</td>";
                     echo "<td>", $hoteis['cidade'], "</td>";
                     echo "<td>", $hoteis['estrelas'], "</td>";
-                    echo "<td> <a href='ver_quartos.php?id_hotel=",$hoteis[id],"'>Ver quartos</a></td>";
-                    echo "</tr>";
+                    echo "<td> <a href='ver_quartos.php?id_hotel=",$hoteis['id'],"'>Ver quartos</a></td>";
+                    echo "</tr>";   
                 }}
                 ?>
         </tbody>
