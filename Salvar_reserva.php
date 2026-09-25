@@ -9,8 +9,8 @@ $sql = "INSERT INTO reservas (cliente_id, quarto_id, data_entrada, data_saida) v
 
 
 if(mysqli_query($conexao,$sql)){
-    echo "reserva confirmada";
+    echo "reserva confirmada <a href='minhas_reservas.php'>ver reservas</a>";
 }else{
-    echo "ERRO <a href='reservas.html'>retorne para a tela de reserva</a>";
+    echo "ERRO <a href='ver_quartos.php'>retorne para a tela de reserva</a>";
 }
 ?>
