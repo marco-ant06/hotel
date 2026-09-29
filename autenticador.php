@@ -8,7 +8,7 @@ $sql = "SELECT * FROM clientes where email = '$email' and senha = '$senha'";
 $resultado = mysqli_query($conexao,$sql);
 
 if(mysqli_num_rows($resultado) > 0){
-    echo "login completo <a href='reservas.html'>reservas</a>";
+    echo "login completo <a href='minhas_reservas.php'>reservas</a>";
 }else{
     echo "email ou senha incorreto <a href='login.html'>Login</a>";
 }

@@ -1,6 +1,7 @@
 <?php
 require_once "conexao.php";
-$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, reservas.data_entrada, reservas.data_saida, hoteis.nome FROM reservas join quartos on reservas.quarto_id = quartos.id join hoteis on hoteis.id = quartos.hotel_id";
+$id_h = $_GET['id_hotel'];
+$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, reservas.data_entrada, reservas.data_saida, hoteis.nome FROM reservas join quartos on reservas.quarto_id = quartos.id join hoteis on hoteis.id = quartos.hotel_id where quartos.hotel_id = '$id_h'";
 
 $resultado = mysqli_query($conexao, $sql);
 
@@ -10,11 +11,9 @@ $resultado = mysqli_query($conexao, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style\style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1 style="color: blue;">Hotel System</h1>
     <table>
         <thead>
             <tr>

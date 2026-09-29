@@ -34,7 +34,6 @@ $resultado = mysqli_query($conexao, $sql);
         </table>
         <div>
             <form action="salvar_reserva.php" method="post">
-                <label for="">ID doo cliente:</label><input type="number" id="id_cliente" name="id_cliente">
                 <label for="">ID do quarto:</label><input type="number" id="id_quarto" name="id_quarto">
                 <label for="">Data de entrada:</label><input type="date" id="data_e" name="data_e">
                 <label for="">Data de saida:</label><input type="date" id="data_s" name="data_s">
