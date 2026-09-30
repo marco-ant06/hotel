@@ -1,7 +1,7 @@
 <?php
 require_once "conexao.php";
 $id_h = $_GET['id_hotel'];
-$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, reservas.data_entrada, reservas.data_saida, hoteis.nome FROM reservas join quartos on reservas.quarto_id = quartos.id join hoteis on hoteis.id = quartos.hotel_id where quartos.hotel_id = '$id_h'";
+$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, reservas.data_entrada, reservas.data_saida, hoteis.nome FROM reservas join quartos on reservas.quarto_id = quartos.id join clientes on clientes.id = reservas.cliente_id  where quartos.hotel_id = '$id_h'";
 
 $resultado = mysqli_query($conexao, $sql);
 
@@ -32,5 +32,7 @@ $resultado = mysqli_query($conexao, $sql);
         }
         ?> 
     </table>
+    <a href="cadastrar_quarto.html">cadastro de quarto</a><br>
+    <a href="logout_hotel.php">sair</a>
 </body>
 </html>
