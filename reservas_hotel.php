@@ -1,7 +1,7 @@
 <?php
 require_once "conexao.php";
 $id_h = $_GET['id_hotel'];
-$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, reservas.data_entrada, reservas.data_saida, hoteis.nome FROM reservas join quartos on reservas.quarto_id = quartos.id join clientes on clientes.id = reservas.cliente_id  where quartos.hotel_id = '$id_h'";
+$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, clientes.telefone, reservas.data_entrada, reservas.data_saida, clientes.nome FROM reservas join quartos on reservas.quarto_id = quartos.id join clientes on clientes.id = reservas.cliente_id  where quartos.hotel_id = 1";
 
 $resultado = mysqli_query($conexao, $sql);
 
@@ -17,15 +17,18 @@ $resultado = mysqli_query($conexao, $sql);
     <table>
         <thead>
             <tr>
-                <td>
-
-                </td>
+                <td>id</td>
+                <td>numero</td>
+                <td>tipo</td>
+                <td>preco</td>
             </tr>
         </thead>
         <?php
         while($linha = mysqli_fetch_assoc($resultado)){
             echo "<tr>";
+            echo "<td>", $linha['id'], "</td>";
             echo "<td>", $linha['numero'], "</td>";
+            echo "<td>", $linha['nome'], "</td>";
             echo "<td>", $linha['tipo'], "</td>";
             echo "<td>", $linha['preco_diaria'], "</td>";
             echo "</tr>";
