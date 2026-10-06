@@ -4,11 +4,16 @@ include "conexao.php";
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM clientes where email = '$email' and senha = '$senha'";
+$sql = "SELECT * FROM clientes where email = '$email'";
 $resultado = mysqli_query($conexao,$sql);
 
 if(mysqli_num_rows($resultado) > 0){
-    echo "login completo <a href='minhas_reservas.php'>reservas</a>";
+    while($linha = mysqli_fetch_assoc($resultado)){
+        if(password_verify($senha, $linha['senha'])){
+            header("location: minhas_reservas.php");
+            exit();
+        }
+    }
 }else{
     echo "email ou senha incorreto <a href='login.html'>Login</a>";
 }
